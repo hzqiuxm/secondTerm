@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>hello</title>
+    <link rel="stylesheet" href="https://unpkg.com/element-ui/lib/theme-chalk/index.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+</head>
+<body>
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<h1 class="bg-warning" th:text="${message}">Hello World</h1>
+
+<div id="app" >
+    <div style="color: white">隐藏奖励：7414456963 852 </div>
+    <p class="bg-success">{{ message1 }} </p>
+
+    <form method="post" action="/second">
+
+        <input name="answer" type="text" placeholder="请输 入答案">
+        <input class="btn btn-primary"type="submit" value="提交" >
+
+    </form>
+</div>
+<div >
+    <img src="./img/zuibang.jpg" alt="..." class="img-rounded" width="300" height="300">
+    <img src="./img/jiayou.jpg" alt="..." class="img-rounded" width="300" height="300">
+</div>
+
+<script>
+    var app = new Vue({
+        el: '#app',
+        data: {
+            message1: '请仔细寻找答案进入下一关吧'
+        }
+    });
+
+    console.log("你很聪明，来这里找答案，但是很可惜这一次我给不了你答案了!去其它地方找找吧")
+</script>
+</body>
+</html>
